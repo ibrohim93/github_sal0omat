@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* css variables */
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* css universal codes */
+
+h2.title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 20px;
+}
+
+p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+}
+
+
+img,
+video,
+svg {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+.modal-register-content {
+    position: fixed;
+    top: -200%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    transition: 1s;
+
+}
+
+span.close {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.modal-register h2 {
+
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+span {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(226, 226, 226);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form label {
+    width: 100%;
+}
+
+input,
+select {
+    display: block;
+    margin: auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: transparent;
+    border: 2px solid crimson;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+span.error {
+    display: none;
+    text-align: left;
+    margin: 10px 0px;
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+}
+
+select option {
+    color: black;
+
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+
+.activeModal {
+    top: 0px;
+    transition: 1s;
+}
+
+button.btnyellow {
+    padding: 12px 37px;
+    background-color: rgba(242, 201, 56, 1);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+/* header starting */
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+header nav {
+    padding: 33px 0px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav ul li a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 2%;
+    color: rgba(255, 255, 255, 1);
+    transition: 1s;
+}
+
+header nav ul li:hover a {
+    color: rgba(242, 201, 56, 1);
+    transition: 1s;
+}
+
+
+header nav ul li i.fa {
+    color: rgba(242, 201, 56, 1);
+}
+
+header .header-title {
+    width: 100%;
+    position: relative;
+}
+
+header .header-title .absolute {
+    position: absolute;
+    top: 174px;
+}
+
+header .header-title .image {
+    position: absolute;
+    bottom: 150px;
+}
+
+header .header-title .absolute h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 102px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header .header-title .absolute .box {
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+
+header .header-title .absolute p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 30px;
+}
+
+
+header .header-title .absolute .header-title-bottom {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+header .header-title .absolute .header-title-bottom i.fa {
+    color: rgba(242, 201, 56, 1);
+}
+
+header .header-title .absolute .header-title-bottom i.fa a {
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 36px;
+}
+
+header .header-title .little-box {
+    padding: 25px;
+    border-radius: 9px;
+    backdrop-filter: blur(18px);
+    display: flex;
+    gap: 40px;
+}
+
+header .header-title .little-box .text {
+    display: grid;
+}
+
+header .header-title .little-box .text h4 {
+    font-size: 30px;
+    line-height: 20px;
+    color: white;
+}
+
+header .header-title .little-box .text p {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+header .header-title .little-box .text .stars {
+    color: rgba(242, 201, 56, 1);
+    font-size: 12px;
+}
+
+header .header-title .little-box img {
+    width: 44px;
+    height: 44px;
+}
+
+/*  main starting */
+
+main {
+    width: 100%;
+    background-color: rgba(34, 34, 36, 1);
+    padding: 121px 0px;
+}
+
+main .box {
+    display: grid;
+}
+
+main .box h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: white;
+    padding: 30px 20px;
+}
+
+main .box p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(237, 237, 237, 1);
+}
+
+
+main .border {
+    border-left: 1px solid rgba(61, 61, 64, 1);
+    padding-left: 20px;
+}
+
+main .border h2.title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 63px;
+    color: rgba(255, 255, 255, 1);
+}
+
+main .border p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* section starting */
+
+section.window {
+    position: relative;
+    width: 100%;
+    background-color: rgba(40, 40, 42, 1);
+    padding: 122px 0px;
+}
+
+
+section.window .section-bottom {
+    margin-top: 50px;
+    display: flex;
+}
+
+section.window .section-bottom .box {
+    padding: 25px;
+    border-right: 1px solid rgba(61, 61, 64, 1);
+    text-align: center;
+}
+
+section.window .section-bottom .box h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(150, 150, 150, 1);
+}
+
+section.window .section-bottom .box h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+    color: white;
+    padding-top: 15px;
+}
+
+section.window .section-bottom .box h4 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    color: rgba(97, 97, 97, 1);
+    text-decoration: line-through;
+    padding-top: 5px;
+}
+
+
+section.window .section-bottom .box h5 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(150, 150, 150, 1);
+    padding-top: 10px;
+}
+
+
+section.window .section-bottom .box button {
+    padding: 11px 47px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(34, 34, 36, 1);
+    color: white;
+    margin-top: 45px;
+}
